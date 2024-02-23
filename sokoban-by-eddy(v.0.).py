@@ -39,6 +39,6 @@ while True:
             mapa[posicion_personaje - 1] = 0
             posicion_personaje -= 1
 
-    elif tecla == 'q':
+    elif tecla == 'x': # Envía un mensaje de despedida al presionar tecla x
         print("¡Hasta luego!")
         break
