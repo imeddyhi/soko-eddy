@@ -7,6 +7,13 @@ Implementación de sokoban en Python, versión retro consola
 
 ## ¿Cómo jugar sokoban?
 
+**Objetos:**
+- '0' representa el personaje
+- '1' representa una caja
+- '2' representa una meta
+- '3' representa una pared
+- '4' representa espacios/piso
+
 1. **Movimiento del personaje**:
    El jugador controla un personaje que puede moverse horizontal o verticalmente (arriba, abajo, izquierda, derecha) a través del almacén. El personaje se mueve una casilla a la vez.
 2. **Empujar cajas**:
