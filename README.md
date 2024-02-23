@@ -33,13 +33,14 @@ Para jugar a Sokoban, utiliza los siguientes controles:
 Teclas de dirección: Utiliza las flechas del teclado (arriba, abajo, izquierda, derecha) para mover al personaje en la dirección deseada.
 Ejemplo:
 
-↑ (Flecha hacia arriba): Mover hacia arriba.
+W (Letra W): Mover hacia arriba.
 
-↓ (Flecha hacia abajo): Mover hacia abajo.
+S (Letra S): Mover hacia abajo.
 
-← (Flecha hacia la izquierda): Mover hacia la izquierda.
+A (Letra A): Mover hacia la izquierda.
 
-→ (Flecha hacia la derecha): Mover hacia la derecha.
+D (Letra D): Mover hacia la derecha.
 
 Q (Letra q): Deshacer último movimiento.
 
+X (Letra x): Salir.
