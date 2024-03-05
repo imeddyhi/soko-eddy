@@ -34,8 +34,13 @@ class Soko:
         self.box_fila = 2
 
     def printMap(self):
-        for filas in self.map:
-            print(filas)
+        for fila in self.map:
+            for numero in fila:
+                if numero == 4:
+                    print(" ", end=" ")
+                else:
+                    print(numero, end=" ")
+            print() #aqui era: print(filas)
 
 #definir movimientos
     def mov1(self): #derecha - right
