@@ -13,6 +13,8 @@ Implementación de sokoban en Python, versión retro consola
 - '2' representa una meta
 - '3' representa una pared
 - '4' representa espacios/piso
+- '5' representa personaje sobre meta
+- 
 
 1. **Movimiento del personaje**:
    El jugador controla un personaje que puede moverse horizontal o verticalmente (arriba, abajo, izquierda, derecha) a través del almacén. El personaje se mueve una casilla a la vez.
