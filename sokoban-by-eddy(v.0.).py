@@ -7,7 +7,7 @@ Objetos:
 - '4' representa espacios/piso - "ground"
 - '5' representa 
 '''
-
+import os
 class Soko:
 
     map = [] # mapa del juego
@@ -21,7 +21,7 @@ class Soko:
         self.map =[
             [3,3,3,3,3,3,3,3,3],
             [3,4,4,4,4,4,4,4,3],
-            [3,4,0,4,1,4,4,4,3],
+            [3,4,0,4,4,1,4,2,3],
             [3,4,4,4,4,4,4,4,3],
             [3,3,3,3,3,3,3,3,3]
         ]
@@ -34,13 +34,24 @@ class Soko:
         self.box_fila = 2
 
     def printMap(self):
+        # Limpiar la pantalla
+        os.system('cls' if os.name == 'nt' else 'clear')
+        # Imprimir el mapa
         for fila in self.map:
             for numero in fila:
                 if numero == 4:
-                    print(" ", end=" ")
+                    print("  ", end=" ")
+                elif numero == 0:  # Agrega esta condición para imprimir el personaje
+                    print("🦠", end=" ")
+                elif numero == 1:
+                    print("📦", end=" ")
+                elif numero == 2:
+                    print("🏁", end=" ")
                 else:
-                    print(numero, end=" ")
-            print() #aqui era: print(filas)
+                    print("🚧" if numero == 3 else " ", end=" ")
+            print()  # Imprime una nueva línea después de imprimir cada fila del mapa
+
+
 
 #definir movimientos
     def mov1(self): #derecha - right
@@ -75,6 +86,21 @@ class Soko:
         # Actualiza la posicion del personaje
         self.charac_fila += 1
 
+    def mov5(self): #right, caja
+        # Donde estaba la caja pone un personaje
+        self.map[self.box_fila][self.box_column] = 0
+        # Donde estaba el piso pone la caja
+        self.map[self.box_fila][self.box_column + 1] = 1
+        # Actualiza la posicion de la caja
+        self.box_column += 1
+
+    def mov6(self): #right, personaje-caja
+        # Donde estaba el personaje pone una caja
+        self.map[self.box_fila][self.box_column] = 0
+        # Donde estaba el piso pone la caja
+        self.map[self.box_fila][self.box_column + 1] = 1
+        # Actualiza la posicion de la caja
+        self.box_column += 1
 
 #movimientos
     def right(self):
