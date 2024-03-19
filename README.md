@@ -139,7 +139,7 @@ Para llevar un mejor control del avance del desarrollo llenar Kanban con los sig
 | No. |Función | Kanban | Fecha terminación |
 | --- | --- | --- | --- |
 | 0. | Cargar el siguiente nivel. | - | - |
-| 1. | Repetir el juego hasta terminar el nivel. | - | - |
+| 1. | Repetir el juego hasta terminar el nivel. | Done | Mars, 12, 2024 |
 | 2. | Imprimir mapa.| - | - |
 | 3. | Leer el movimiento. | - | - |
 | 4. | Evaluar el movimiento del usuario. | - | - |
