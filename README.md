@@ -140,9 +140,9 @@ Para llevar un mejor control del avance del desarrollo llenar Kanban con los sig
 | --- | --- | --- | --- |
 | 0. | Cargar el siguiente nivel. | - | - |
 | 1. | Repetir el juego hasta terminar el nivel. | Done | Mars, 12, 2024 |
-| 2. | Imprimir mapa.| - | - |
-| 3. | Leer el movimiento. | - | - |
-| 4. | Evaluar el movimiento del usuario. | - | - |
+| 2. | Imprimir mapa.| Done | - |
+| 3. | Leer el movimiento. | Done | - |
+| 4. | Evaluar el movimiento del usuario. | Done | - |
 
 ## Derecha
 
@@ -153,10 +153,10 @@ Ejemplo de movimientos Inicio y Fin:
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 5. | Personaje, espacio  | - | [      ] | [     ] | - |
-| 6. | Personaje, meta  | - | [      ] | [      ] |- |
-| 7. | Personaje, caja, espacio | - | [      ] | [      ] | - |
-| 8. | Personaje, caja,  meta | - | [      ] | [      ] | - |
+| 5. | Personaje, espacio  | Done | [0,4] | [4,0] | - |
+| 6. | Personaje, meta  | Doing | [0,2] | [4,5] |- |
+| 7. | Personaje, caja, espacio | Done | [0,1,4] | [4,0,1] | - |
+| 8. | Personaje, caja,  meta | Doing | [0,1,2] | [4,0,6] | - |
 | 9. | Personaje, caja_meta, espacio | - | [       ] | [       ] | - |
 | 10. |Personaje, caja_meta, meta | - | [       ] | [       ] | - |
 | 11. | Personaje_meta, espacio | - | [       ] | [       ] | - |
