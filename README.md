@@ -117,8 +117,8 @@ mapa = [
 - 2 - Metas
 - 3 - Paredes
 - 4 - Piso
-- 5 - Pesonaje meta
-- 6 - Caja meta
+- 5 - Pesonaje_meta
+- 6 - Caja_meta
 
 ## 4. Controles
 
@@ -156,7 +156,7 @@ Ejemplo de movimientos Inicio y Fin:
 | 5. | Personaje, espacio  | Done | [0,4] | [4,0] | - |
 | 6. | Personaje, meta  | Doing | [0,2] | [4,5] |- |
 | 7. | Personaje, caja, espacio | Done | [0,1,4] | [4,0,1] | - |
-| 8. | Personaje, caja,  meta | Doing | [0,1,2] | [4,0,6] | - |
+| 8. | Personaje, caja,  meta | Done | [0,1,2] | [4,0,6] | Mars 22, 2024 |
 | 9. | Personaje, caja_meta, espacio | - | [       ] | [       ] | - |
 | 10. |Personaje, caja_meta, meta | - | [       ] | [       ] | - |
 | 11. | Personaje_meta, espacio | - | [       ] | [       ] | - |
@@ -173,7 +173,7 @@ Ejemplo de movimientos Inicio y Fin:
 | 17. | Personaje, espacio | - | [       ] | [       ] | - |
 | 18. | Personaje, meta | - | [       ] | [       ] | - |
 | 19. | Personaje, caja, espacio | - | [       ] | [       ] | - |
-| 20. | Personaje, caja, meta | - | [       ] | [       ] | - |
+| 20. | Personaje, caja, meta | Done | [2,1,0] | [6,0,4] | Mars 22, 2024 |
 | 21. | Personaje, caja_meta, espacio | - | [       ] | [       ] | - |
 | 22. | Personaje, caja_meta, meta | - | [       ] | [       ] | - |
 | 23. | Personaje_meta, espacio | - | [       ] | [       ] | - |
