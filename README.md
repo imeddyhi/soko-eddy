@@ -190,7 +190,7 @@ Ejemplo de movimientos Inicio y Fin:
 | 29. | Personaje, espacio | - | [][] | [][] | - |
 | 30. | Personaje, meta | - | [][] | [][] | - |
 | 31. | Personaje, caja, espacio | - | [][] | [][] | - |
-| 32. | Personaje, caja, meta | - | [][] | [][] | - |
+| 32. | Personaje, caja, meta | Done | [][] | [][] | - |
 | 33. | Personaje, caja_meta, espacio | - | [][] | [][] | - |
 | 34. | Personaje, caja_meta, meta | - | [][] | [][] | - |
 | 35. | Personaje_meta, espacio | - | [][] | [][] | - |
