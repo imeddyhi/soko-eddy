@@ -5,7 +5,8 @@ Objetos:
 - '2' representa una meta - "goal"
 - '3' representa una pared - "wall"
 - '4' representa espacios/piso - "ground"
-- '5' representa 
+- '5' representa el personaje sobre meta - "charac-goal"
+- '6' representa una caja sobre meta - "box-goal"
 '''
 import os
 class Soko:
@@ -22,7 +23,7 @@ class Soko:
             [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
             [3,4,0,4,4,4,4,4,4,4,1,4,2,3],
-            [3,4,4,4,4,1,4,4,4,4,4,4,4,3],
+            [3,4,4,2,4,1,4,4,4,4,4,4,4,3],
             [3,4,4,4,4,4,4,1,4,4,4,4,4,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
             [3,3,3,3,3,3,3,3,3,3,3,3,3,3]
@@ -49,6 +50,8 @@ class Soko:
                     print("📦", end=" ")
                 elif numero == 2:
                     print("🏁", end=" ")
+                elif numero == 6:
+                    print("🏴", end=" ")
                 else:
                     print("🚧" if numero == 3 else " ", end=" ")
             print()  # Imprime una nueva línea después de imprimir cada fila del mapa
@@ -128,6 +131,45 @@ class Soko:
         # Actualiza la posicion del personaje
         self.charac_fila += 1
 
+    def mov9(self): #right, box-goal [0,1,2]
+        # Donde estaba el personaje pone un piso, [4,1,2]
+        self.map[self.charac_fila][self.charac_column] = 4
+        # Donde estaba la caja pone al personaje, [4,0,2]
+        self.map[self.charac_fila][self.charac_column + 1] = 0
+        # Donde estaba la meta pone a la box-goal [4,0,6]
+        self.map[self.charac_fila][self.charac_column + 2] = 6
+        # Actualiza la posicion del personaje
+        self.charac_column += 1
+
+    def mov10(self): #left, box-goal [2,1,0]
+        # Donde estaba el personaje pone un piso, [2,1,4]
+        self.map[self.charac_fila][self.charac_column] = 4
+        # Donde estaba la caja pone al personaje, [2,0,4]
+        self.map[self.charac_fila][self.charac_column - 1] = 0
+        # Donde estaba la meta pone a la box-goal [6,0,4]
+        self.map[self.charac_fila][self.charac_column - 2] = 6
+        # Actualiza la posicion del personaje
+        self.charac_column -= 1
+
+    def mov11(self): #up, box-goal [2,1,0]
+        # Donde estaba el personaje pone un piso, [2,1,4]
+        self.map[self.charac_fila][self.charac_column] = 4
+        # Donde estaba la caja pone al personaje, [2,0,4]
+        self.map[self.charac_fila - 1][self.charac_column] = 0
+        # Donde estaba la meta pone a la box-goal [6,0,4]
+        self.map[self.charac_fila - 2][self.charac_column] = 6
+        # Actualiza la posicion del personaje
+        self.charac_fila -= 1
+
+    def mov12(self): #down, box-goal [2,1,0]
+        # Donde estaba el personaje pone un piso, [2,1,4]
+        self.map[self.charac_fila][self.charac_column] = 4
+        # Donde estaba la caja pone al personaje, [2,0,4]
+        self.map[self.charac_fila + 1][self.charac_column] = 0
+        # Donde estaba la meta pone a la box-goal [6,0,4]
+        self.map[self.charac_fila + 2][self.charac_column] = 6
+        # Actualiza la posicion del personaje
+        self.charac_fila += 1
 
 #movimientos
     def right(self):
@@ -136,6 +178,8 @@ class Soko:
             self.mov1()
         elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column + 1] == 1) and self.map[self.charac_fila][self.charac_column + 2] == 4:
             self.mov5()
+        elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column + 1] == 1) and self.map[self.charac_fila][self.charac_column + 2] == 2:
+            self.mov9()
 
     def left(self):
         #mov 2: [4,0] -> [0,4]
@@ -143,6 +187,8 @@ class Soko:
             self.mov2()
         elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column - 1] == 1) and self.map[self.charac_fila][self.charac_column - 2] == 4:
             self.mov6()
+        elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column - 1] == 1) and self.map[self.charac_fila][self.charac_column - 2] == 2:
+            self.mov10()
 
     def up(self):
         #mov 3: [4,4], [4,0] -> [4,0], [4,4]
@@ -150,6 +196,8 @@ class Soko:
             self.mov3()
         elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila - 1][self.charac_column] == 1) and self.map[self.charac_fila - 2][self.charac_column] == 4:
             self.mov7()
+        elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila - 1][self.charac_column] == 1) and self.map[self.charac_fila - 2][self.charac_column] == 2:
+            self.mov11()
 
     def down(self):
         #mov 2: [4,0], [4,4] -> [4,4], [4,0]
@@ -157,7 +205,8 @@ class Soko:
             self.mov4()
         elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila + 1][self.charac_column] == 1) and self.map[self.charac_fila + 2][self.charac_column] == 4:
             self.mov8()
-
+        elif (self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila + 1][self.charac_column] == 1) and self.map[self.charac_fila + 2][self.charac_column] == 2:
+            self.mov12()
 
 
     def play(self):
