@@ -154,14 +154,14 @@ Ejemplo de movimientos Inicio y Fin:
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
 | 5. | Personaje, espacio  | Done | [0,4] | [4,0] | - |
-| 6. | Personaje, meta  | Doing | [0,2] | [4,5] |- |
+| 6. | Personaje, meta  | Done | [0,2] | [4,5] | April 5, 2024 |
 | 7. | Personaje, caja, espacio | Done | [0,1,4] | [4,0,1] | - |
 | 8. | Personaje, caja,  meta | Done | [0,1,2] | [4,0,6] | Mars 22, 2024 |
-| 9. | Personaje, caja_meta, espacio | - | [       ] | [       ] | - |
-| 10. |Personaje, caja_meta, meta | - | [       ] | [       ] | - |
+| 9. | Personaje, caja_meta, espacio | Done | [0,6,4] | [4,5,1] | April 5, 2024 |
+| 10. | Personaje, caja_meta, meta | - | [       ] | [       ] | - |
 | 11. | Personaje_meta, espacio | - | [       ] | [       ] | - |
 | 12. | Personaje_meta, meta | - | [       ] | [       ] | - |
-| 13. | Personaje_meta, caja, espacio | - | [       ] | [       ] | - |
+| 13. | Personaje_meta, caja, espacio | Done | [5,1,4] | [2,0,1] | April 5, 2024 |
 | 14. | Personaje_meta, caja, meta | - | [       ] | [       ] | - |
 | 15. | Personaje_meta, caja_meta, espacio | - | [       ] | [       ] | - |
 | 16. | Personaje_meta, caja_meta, meta | - | [       ] | [       ] | - |
@@ -170,15 +170,15 @@ Ejemplo de movimientos Inicio y Fin:
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 17. | Personaje, espacio | - | [       ] | [       ] | - |
-| 18. | Personaje, meta | - | [       ] | [       ] | - |
-| 19. | Personaje, caja, espacio | - | [       ] | [       ] | - |
+| 17. | Personaje, espacio | Done | [4,0] | [0,4] | - |
+| 18. | Personaje, meta | Done | [2,0] | [5,4] | April 5, 2024 |
+| 19. | Personaje, caja, espacio | Done | [4,1,0] | [1,0,4] | - |
 | 20. | Personaje, caja, meta | Done | [2,1,0] | [6,0,4] | Mars 22, 2024 |
-| 21. | Personaje, caja_meta, espacio | - | [       ] | [       ] | - |
+| 21. | Personaje, caja_meta, espacio | Done | [4,6,0] |[1,5,4] | April 5, 2024 |
 | 22. | Personaje, caja_meta, meta | - | [       ] | [       ] | - |
 | 23. | Personaje_meta, espacio | - | [       ] | [       ] | - |
 | 24. | Personaje_meta, meta | - | [       ] | [       ] | - |
-| 25. | Personaje_meta, caja, espacio | - | [       ] | [       ] | - |
+| 25. | Personaje_meta, caja, espacio | Done | [4,1,5] | [1,0,2] | April 5, 2024 |
 | 26. | Personaje_meta, caja, meta | - | [       ] | [       ] | - |
 | 27. | Personaje_meta, caja_meta, espacio | - | [       ] | [       ] | - |
 | 28. | Personaje_meta, caja_meta, meta | - | [       ] | [       ] | - |
@@ -187,15 +187,15 @@ Ejemplo de movimientos Inicio y Fin:
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 29. | Personaje, espacio | - | [][] | [][] | - |
-| 30. | Personaje, meta | - | [][] | [][] | - |
-| 31. | Personaje, caja, espacio | - | [][] | [][] | - |
-| 32. | Personaje, caja, meta | Done | [][] | [][] | - |
-| 33. | Personaje, caja_meta, espacio | - | [][] | [][] | - |
+| 29. | Personaje, espacio | Done | [4][0] | [0][4] | - |
+| 30. | Personaje, meta | Done | [2][0] | [5][4] | April 5, 2024 |
+| 31. | Personaje, caja, espacio | Done | [4][1][0] | [1][0][4] | - |
+| 32. | Personaje, caja, meta | Done | [2][1][0] | [6][0][4] | - |
+| 33. | Personaje, caja_meta, espacio | Done | [4][6][0] | [1][5][4] | April 5, 2024 |
 | 34. | Personaje, caja_meta, meta | - | [][] | [][] | - |
 | 35. | Personaje_meta, espacio | - | [][] | [][] | - |
 | 36. | Personaje_meta, meta | - | [][] | [][] | - |
-| 37. | Personaje_meta, caja, espacio | - | [][] | [][] | - |
+| 37. | Personaje_meta, caja, espacio | Done | [4][1][5] | [1][0][2] | April 5, 2024 |
 | 38. | Personaje_meta, caja, meta | - | [][] | [][] | - |
 | 39. | Personaje_meta, caja_meta, espacio | - | [][] | [][] | - |
 | 40. | Personaje_meta, caja_meta, meta | - | [][] | [][] | - |
@@ -204,15 +204,15 @@ Ejemplo de movimientos Inicio y Fin:
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 41. | Personaje, espacio | - | [][] | [][] | - |
-| 42. | Personaje, meta | - | [][] | [][] | - |
-| 43. | Personaje, caja, espacio | - | [][] | [][] | - |
-| 44. | Personaje, caja, meta | - | [][] | [][] | - |
-| 45. | Personaje, caja_meta, espacio | - | [][] | [][] | - |
+| 41. | Personaje, espacio | Done | [0][4] | [4][0] | - |
+| 42. | Personaje, meta | Done | [0][2] | [4][5] | April 5, 2024 |
+| 43. | Personaje, caja, espacio | Done | [0][1][4] | [4][0][1] | - |
+| 44. | Personaje, caja, meta | Done | [0][1][2] | [4][0][6] | - |
+| 45. | Personaje, caja_meta, espacio | Done | [0][6][4] | [4][5][1] | April 5, 2024 |
 | 46. | Personaje, caja_meta, meta | - | [][] | [][] | - |
 | 47. | Personaje_meta, espacio | - | [][] | [][] | - |
 | 48. | Personaje_meta, meta | - | [][] | [][] | - |
-| 49. | Personaje_meta, caja, espacio | - | [][] | [][] | - |
+| 49. | Personaje_meta, caja, espacio | Done | [5][1][4] | [2][0][1] | April 5, 2024 |
 | 50. | Personaje_meta, caja, meta | - | [][] | [][] | - |
 | 51. | Personaje_meta, caja_meta, espacio | - | [][] | [][] | - |
 | 52. | Personaje_meta, caja_meta, meta | - | [][] | [][] | - |
