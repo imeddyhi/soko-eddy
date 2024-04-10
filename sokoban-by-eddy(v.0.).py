@@ -20,13 +20,13 @@ class Soko:
     def __init__(self): # Define el mapa de juego
         self.map =[
             [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
             [3,4,0,4,2,2,4,4,4,4,1,4,2,3],
-            [3,4,4,2,2,1,2,4,4,4,4,4,4,3],
+            [3,4,2,2,2,1,2,2,2,4,4,4,4,3],
             [3,4,4,4,4,2,4,1,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
             [3,3,3,3,3,3,3,3,3,3,3,3,3,3]
         ]
 
@@ -281,6 +281,54 @@ class Soko:
         self.map[self.charac_fila + 2][self.charac_column] = 6
         self.charac_fila += 1
 
+    def mov41(self): #right, charac-goal-box-goal->ground [5,6,4] -> [2,5,1]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila][self.charac_column + 1] = 5
+        self.map[self.charac_fila][self.charac_column + 2] = 1
+        self.charac_column += 1
+
+    def mov42(self): #left, charac-goal-box-goal->ground [4,6,5] -> [1,5,2]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila][self.charac_column - 1] = 5
+        self.map[self.charac_fila][self.charac_column - 2] = 1
+        self.charac_column -= 1
+
+    def mov43(self): #up, charac-goal-box-goal->ground [4][6][5] -> [1][5][2]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila - 1][self.charac_column] = 5
+        self.map[self.charac_fila - 2][self.charac_column] = 1
+        self.charac_fila -= 1
+
+    def mov44(self): #down, charac-goal-box-goal->ground [5][6][4] -> [2][5][1]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila + 1][self.charac_column] = 5
+        self.map[self.charac_fila + 2][self.charac_column] = 1
+        self.charac_fila += 1
+
+    def mov45(self): #right, charac-goal-box-goal->goal [5,6,2] -> [2,5,6]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila][self.charac_column + 1] = 5
+        self.map[self.charac_fila][self.charac_column + 2] = 6
+        self.charac_column += 1
+
+    def mov46(self): #left, charac-goal-box-goal->goal [2,6,5] -> [6,5,2]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila][self.charac_column - 1] = 5
+        self.map[self.charac_fila][self.charac_column - 2] = 6
+        self.charac_column -= 1
+
+    def mov47(self): #up, charac-goal-box-goal->goal [2][6][5] -> [6][5][2]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila - 1][self.charac_column] = 5
+        self.map[self.charac_fila - 2][self.charac_column] = 6
+        self.charac_fila -= 1
+
+    def mov48(self): #down, charac-goal-box-goal->goal [5][6][2] -> [2][5][6]
+        self.map[self.charac_fila][self.charac_column] = 2
+        self.map[self.charac_fila + 1][self.charac_column] = 5
+        self.map[self.charac_fila + 2][self.charac_column] = 6
+        self.charac_fila += 1
+
 #movimientos
     def right(self): # Movimiento del personaje a la derecha
         if self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column + 1] == 4:
@@ -303,6 +351,10 @@ class Soko:
             self.mov33()
         elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column + 1] == 1 and self.map[self.charac_fila][self.charac_column + 2] == 2):
             self.mov37()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column + 1] == 6 and self.map[self.charac_fila][self.charac_column + 2] == 4):
+            self.mov41()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column + 1] == 6 and self.map[self.charac_fila][self.charac_column + 2] == 2):
+            self.mov45()
 
     def left(self): # Movimiento del personaje a la izquierda
         if self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila][self.charac_column - 1] == 4:
@@ -325,6 +377,10 @@ class Soko:
             self.mov34()
         elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column - 1] == 1 and self.map[self.charac_fila][self.charac_column - 2] == 2):
             self.mov38()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column - 1] == 6 and self.map[self.charac_fila][self.charac_column - 2] == 4):
+            self.mov42()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila][self.charac_column - 1] == 6 and self.map[self.charac_fila][self.charac_column - 2] == 2):
+            self.mov46()
 
     def up(self): # Movimiento del personaje arriba
         if self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila - 1][self.charac_column] == 4:
@@ -347,6 +403,10 @@ class Soko:
             self.mov35()
         elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila - 1][self.charac_column] == 1 and self.map[self.charac_fila - 2][self.charac_column] == 2):
             self.mov39()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila - 1][self.charac_column] == 6 and self.map[self.charac_fila - 2][self.charac_column] == 4):
+            self.mov43()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila - 1][self.charac_column] == 6 and self.map[self.charac_fila - 2][self.charac_column] == 2):
+            self.mov47()
 
     def down(self): # Movimiento del personaje abajo
         if self.map[self.charac_fila][self.charac_column] == 0 and self.map[self.charac_fila + 1][self.charac_column] == 4:
@@ -369,6 +429,10 @@ class Soko:
             self.mov36()
         elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila + 1][self.charac_column] == 1 and self.map[self.charac_fila + 2][self.charac_column] == 2):
             self.mov40()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila + 1][self.charac_column] == 6 and self.map[self.charac_fila + 2][self.charac_column] == 4):
+            self.mov44()
+        elif (self.map[self.charac_fila][self.charac_column] == 5 and self.map[self.charac_fila + 1][self.charac_column] == 6 and self.map[self.charac_fila + 2][self.charac_column] == 2):
+            self.mov48()
 
 #lectura de teclado
     def play(self):
