@@ -33,6 +33,21 @@ class Soko:
         # Definimos la posicion inicial del personaje
         self.charac_column = 2
         self.charac_fila = 3
+    
+    def restart_level(self):
+        self.map = [
+            [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,4,0,4,2,2,4,4,4,4,1,4,2,3],
+            [3,4,2,2,2,1,2,2,2,4,4,4,4,3],
+            [3,4,4,4,4,2,4,1,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,2,4,4,4,4,4,4,4,3],
+            [3,3,3,3,3,3,3,3,3,3,3,3,3,3]
+        ]
+        self.charac_column = 2
+        self.charac_fila = 3
 
     def printMap(self): # Imprimir el mapa
         os.system('cls' if os.name == 'nt' else 'clear') # Limpiar la pantalla
@@ -447,6 +462,8 @@ class Soko:
                 self.up()
             if mov == 's': # Moverse abajo con letra s
                 self.down()
+            if mov == 'r':
+                self.restart_level()
 
 soko = Soko()
 soko.play()
