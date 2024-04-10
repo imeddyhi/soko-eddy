@@ -222,7 +222,7 @@ Ejemplo de movimientos Inicio y Fin:
 | No. | Función | Kanban | Fecha terminación |
 | --- | --- | --- | --- |
 | 53. | Evaluar si el nivel esta terminado (Esto sucede cuando todas las cajas estan sobre las metas), SI el nivel esta terminado cargar el siguiente nivel (Los niveles de juego estarán en archivos de texto independiente). | - | - |
-| 54. | Reiniciar el mapa (Con la letra r, se vuelve a cargar el nivel que se esta jugando) | - | - |
+| 54. | Reiniciar el mapa (Con la letra r, se vuelve a cargar el nivel que se esta jugando) | Done | April 9, 2024 |
 
 ## Función extra
 
