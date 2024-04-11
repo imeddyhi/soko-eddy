@@ -1,4 +1,4 @@
-# soko-eddy
+**soko-by-eddy**
 Implementación de sokoban en Python, versión retro consola
 
 # SOKOBAN
