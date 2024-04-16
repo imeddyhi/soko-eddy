@@ -1,13 +1,18 @@
-'''
-Objetos:
-- '0' representa el personaje - "charac"
-- '1' representa una caja - "box"
-- '2' representa una meta - "goal"
-- '3' representa una pared - "wall"
-- '4' representa espacios/piso - "ground"
-- '5' representa el personaje sobre meta - "charac-goal"
-- '6' representa una caja sobre meta - "box-goal"
-'''
+"""
+    Author: José Eduardo Caballero Urrutia
+    Date: 16/Abril/2024
+    Items:
+
+    0 -> Personaje
+    1 -> Caja
+    2 -> Meta
+    3 -> Pared
+    4 -> Piso
+    5 -> Personaje_meta
+    6 -> Caja_meta
+
+    Description: Juego Sokoban en una versión retro para consola.
+"""
 import os
 class Soko:
 
@@ -56,19 +61,19 @@ class Soko:
         for fila in self.map:
             for numero in fila:
                 if numero == 4:
-                    print("  ", end=" ")
+                    print("  ", end="")
                 elif numero == 0:  # Agrega esta condición para imprimir el personaje
-                    print("😼", end=" ")
+                    print("😼", end="")
                 elif numero == 1:
-                    print("📦", end=" ")
+                    print("📦", end="")
                 elif numero == 2:
-                    print("🏁", end=" ")
+                    print("🏁", end="")
                 elif numero == 5:
-                    print("😺", end=" ")
+                    print("😺", end="")
                 elif numero == 6:
-                    print("🏴", end=" ")
+                    print("🏴", end="")
                 elif numero == 3:
-                    print("🚧", end=" ")
+                    print("🚧", end="")
             print()  # Imprime una nueva línea después de imprimir cada fila del mapa
         boxes = sum(fila.count(1) for fila in self.map)  # Contamos el número de cajas en el mapa
         print("Cajas restantes: ", boxes)
